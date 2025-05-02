@@ -1,6 +1,7 @@
 # 간단한 게시판 프로젝트
 
 ## Docker로 MySQL 8.0.26 서버를 띄우기 위한 설정
+```docker-compose.yaml```
 ```yaml
 version: "3"
 services:
@@ -20,6 +21,24 @@ services:
       - TZ=${TZ}
     volumes:
       - ${MYSQL_VOLUME_PATH}:/var/lib/mysql
+```
+
+```application.yaml```
+```yaml
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      format_sql: true
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: validate
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/simple_board?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: YOUR_DB_USERNAME
+    password: YOUR_DB_PASSWORD
 ```
 
 ## EER Diagram
