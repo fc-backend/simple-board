@@ -23,7 +23,7 @@ services:
 ```
 
 ## EER Diagram
-![Image](https://github.com/user-attachments/assets/9616b9c4-8ada-4b29-b6dc-a43846b68022)
+![Image](https://github.com/user-attachments/assets/7e885eda-21de-476c-8831-3327c40adf6f)
 
 ## REST API
 
