@@ -16,11 +16,11 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - TZ=${TZ}
+      - MYSQL_DATABASE=<MYSQL_DATABASE>
+      - MYSQL_ROOT_PASSWORD=<MYSQL_ROOT_PASSWORD>
+      - TZ=<TZ>
     volumes:
-      - ${MYSQL_VOLUME_PATH}:/var/lib/mysql
+      - <MYSQL_VOLUME_PATH>:/var/lib/mysql
 ```
 
 ```application.yaml```
@@ -37,8 +37,8 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/simple_board?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: YOUR_DB_USERNAME
-    password: YOUR_DB_PASSWORD
+    username: <YOUR_DB_USERNAME>
+    password: <YOUR_DB_PASSWORD>
 ```
 
 ## EER Diagram
